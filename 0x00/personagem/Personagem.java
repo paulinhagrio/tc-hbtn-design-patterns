@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public abstract class Personagem {
     String nome;
     TipoPersonagem tipo;
@@ -19,18 +21,32 @@ public abstract class Personagem {
 
     public abstract double getDanoAtaque();
 
+
     @Override
     public String toString() {
         return "Personagem { " +
                 "nome = " + nome +
-                ", tipo =" + tipo +
-                ", inteligencia =" + inteligencia +
-                ", forca =" + forca +
-                ", vigor =" + vigor +
-                ", resistencia =" + resistencia +
-                ", destreza =" + destreza +
-                ", dano ataque =" + String.format("%.2f", getDanoAtaque()) +
+                ", tipo = " + tipo +
+                ", inteligencia = " + inteligencia +
+                ", forca = " + forca +
+                ", vigor = " + vigor +
+                ", resistencia = " + resistencia +
+                ", destreza = " + destreza +
+                ", dano ataque = " + String.format(Locale.FRANCE, "%,.2f", getDanoAtaque()) +
                 " }";
+
+//    public String toString() {
+//        return "Personagem { " +
+//                "nome = " + nome +
+//                ", tipo =" + tipo +
+//                ", inteligencia =" + inteligencia +
+//                ", forca =" + forca +
+//                ", vigor =" + vigor +
+//                ", resistencia =" + resistencia +
+//                ", destreza =" + destreza +
+//                ", dano ataque =" + String.format("%.2f", getDanoAtaque()) +
+//                " }";
+//    }
     }
 }
 
