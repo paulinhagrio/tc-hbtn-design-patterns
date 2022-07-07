@@ -10,10 +10,10 @@ public class CalculadorSalarioService {
     }
 
     public static CalculadorSalarioService getCalculadorSalarioService(){
-        if(CalculadorSalarioService.instancia == null){
-             CalculadorSalarioService.instancia = new CalculadorSalarioService(instancia);
+        if(instancia == null){
+             instancia = new CalculadorSalarioService(instancia);
         }
-        return CalculadorSalarioService.instancia;
+        return instancia;
 
     }
 
