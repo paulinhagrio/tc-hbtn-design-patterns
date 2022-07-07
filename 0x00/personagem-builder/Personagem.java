@@ -32,8 +32,23 @@ public abstract class Personagem {
                 ", vigor = " + vigor +
                 ", resistencia = " + resistencia +
                 ", destreza = " + destreza +
-                ", dano ataque = " + String.format(Locale.FRANCE, "%,.2f", getDanoAtaque()) +
+                ", dano ataque = " + String.format("%.2f", getDanoAtaque()) +
                 " }";
+
+
+
+
+
+//        return "Personagem { " +
+//                "nome = " + nome +
+//                ", tipo = " + tipo +
+//                ", inteligencia = " + inteligencia +
+//                ", forca = " + forca +
+//                ", vigor = " + vigor +
+//                ", resistencia = " + resistencia +
+//                ", destreza = " + destreza +
+//                ", dano ataque = " + String.format(Locale.FRANCE, "%,.2f", getDanoAtaque()) +
+//                " }";
     }
 }
 
