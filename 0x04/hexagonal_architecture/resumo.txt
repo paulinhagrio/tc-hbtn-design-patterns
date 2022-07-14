@@ -1,0 +1,44 @@
+1)O que é Arquitetura Hexagonal e por quem ela foi criada ?
+Os objetivos de uma Arquitetura Hexagonal são parecidos com os de uma Arquitetura Limpa. Mas, para reforçar, a ideia é construir sistemas que favorecem reusabilidade de código, alta coesão, baixo acoplamento, independência de tecnologia e que são mais fáceis de serem testados.
+Uma Arquitetura Hexagonal divide as classes de um sistema em dois grupos principais:
+* Classes de domínio, isto é, diretamente relacionadas com o negócio do sistema.
+* Classes relacionadas com infraestrutura, tecnologias e responsáveis pela integração com sistemas externos (tais como bancos de dados).
+Além disso, em uma Arquitetura Hexagonal, classes de domínio não devem depender de classes relacionadas com infraestrutura, tecnologias ou sistemas externos. A vantagem dessa divisão é desacoplar esses dois tipos de classes.
+Assim, as classes de domínio não conhecem as tecnologias – bancos de dados, interfaces com usuário e quaisquer outras bibliotecas – usadas pelo sistema. Consequentemente, mudanças de tecnologia podem ser feitas sem impactar as classes de domínio. Talvez ainda mais importante, as classes de domínio podem ser compartilhadas por mais de uma tecnologia. Por exemplo, um sistema pode ter diversas interfaces (Web, mobile, etc).
+Em uma arquitetura hexagonal, a comunicação entre as classes dos dois grupos é mediada por adaptadores, isto é, por classes que implementam o padrão de projeto de mesmo nome que estudamos no Capítulo 6.
+
+Visualmente, a arquitetura é representada por meio de dois hexágonos concêntricos. No hexágono interno, ficam as classes do domínio (ou classes de negócio, se você preferir). No hexágono externo, ficam os adaptadores. Por fim, as classes de interface com o usuário, classes de tecnologia ou de sistemas externos ficam fora desses dois hexágonos.
+
+1.1)Alistair Cockburn é o criador do padrão da Arquitetura Hexagonal ou mesmo conhecido como o padrão de portas e adaptadores.
+
+
+2)Quais são os benefícios e recursos que Arquitetura Hexagonal fornece?
+
+Como Pontos positivos da utilização desta arquitetura, podemos enumerar:
+
+* Solução de Serviços Externos Independentes
+* Possibilita adiar algumas decisões técnicas
+* Criação e substituição de adaptadores
+* Fácil de testar a aplicação
+* Tecnologias fáceis de trocar
+
+3)Quais as diferenças entre Arquitetura Hexagonal e Clean Architecture ?
+
+Clean architecture, tema apresentado no guia, aborda uma visão que na prática consolida o uso de camadas, inversão de dependências e DDD. Assemelha-se à proposta da Hexagonal Architecture, mas segue a linha proposta por outro padrão, o Onion architecture.
+
+Seu desenho mais famoso traz uma visão diferente da tradicional de camadas, mas ainda assim é totalmente apoiada sobre o uso delas.
+É outra forma de representar a hierarquia entre as camadas, mas mantendo as premissas de isolamento e inversão de dependências. 
+
+enquanto que a Hexagonal Architecture, tema apresentado no guia, também conhecido por “ports and adapters architecture”, é um padrão apoiado sobre o uso de camadas, e que busca uma outra forma de representar e aplicar na prática as questões de organização, isolamento e dependência entre as camadas. Quando criado, teve como motivação os problemas citados no tema Camadas com relação a desorganização no uso de camadas e a infiltração de lógica de negócio em outras camadas.
+
+
+4)Na sua opinião, a Arquitetura Hexagonal pode ser utilizada em qualquer tipo de projeto ? Quais informações devem ser consideradas antes de desenvolver sistemas usando esse padrão de projeto ?
+Na verdade não. Não vale a pena em projetos pequenos que não irão crescer pois não vale a pena o esforço de implantação desse tipo de arquitetura.
+
+não são em todos os casos que realmente valerá a pena sua utilização.
+Em sistemas muito pequenos ou que dificilmente irá gerar trabalho de manutenção/novas features talvez não seja tão interessante o custo-benefício de sua implementação, já que demanda um alto grau de esforço de desenvolvimento.
+Como em todos os casos no nosso cotidiano, deve ser feita uma análise de viabilidade, já que podem haver formas mais eficazes de resolver o mesmo problema.
+
+
+
+
